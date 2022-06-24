@@ -1,0 +1,218 @@
+:root {
+  --white: rgb(255, 255, 255);
+  --light-gray: rgb(128, 128, 128);
+  --shdaow: rgba(128, 128, 128, 0.567);
+  --result-bg: rgb(43, 43, 43);
+}
+
+@font-face {
+  font-family: "Tera";
+  src: url(../fonts/Tera-Regular.ttf);
+}
+#wrap_div {
+  width: 90%;
+  align-items: center;
+}
+
+#pick_a_day {
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 0;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+#from_input_box, #to_input_box {
+  border: 1px solid var(--white);
+  border-radius: 50px;
+  box-shadow: 10px 3px 10px var(--shdaow) inset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0;
+  flex-wrap: wrap;
+}
+
+#amh {
+  color: var(--white);
+  font-family: Tera;
+  font-size: 1.5rem;
+  text-shadow: 10px 3px 6px var(--light-gray);
+  margin: 0;
+  transition: 1s;
+}
+
+#highlight {
+  color: var(--white);
+  text-decoration: underline;
+}
+
+#from_txt, #to_txt {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--white);
+  font-size: 1rem;
+  margin: 0;
+  text-shadow: 10px 3px 5px var(--shdaow);
+}
+
+#to_day, #from_day {
+  color: var(--white);
+  font-family: Tera;
+  font-size: 1.5rem;
+  text-shadow: 10px 3px 6px var(--light-gray);
+  margin: 0;
+  transition: 1s;
+}
+
+#from_day:hover {
+  color: var(--light-gray);
+  cursor: default;
+}
+
+#to_day:hover {
+  color: var(--light-gray);
+  cursor: default;
+}
+
+#button_and_notify_area {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#choice_identify {
+  color: var(--white);
+  font-family: Tera;
+  margin: 0;
+}
+
+#green {
+  color: green;
+}
+
+#red {
+  color: red;
+}
+
+#button_div {
+  border: 1px solid var(--white);
+  border-radius: 50px;
+  display: inline-block;
+  width: 60%;
+  height: 40px;
+  box-shadow: -5px 3px 10px var(--shdaow) inset;
+  position: relative;
+}
+#button_div #button {
+  background-color: var(--white);
+  border: none;
+  padding: 10px 0;
+  color: var(--light-gray);
+  font-family: Tera;
+  font-size: 100%;
+  border-radius: 50px;
+  width: 95%;
+  box-shadow: 5px 3px 10px var(--shdaow) inset;
+  position: absolute;
+  height: 100%;
+  left: 0;
+  right: unset;
+  transition: 1s;
+}
+#button_div #button:hover {
+  background: var(--light-gray);
+  color: var(--white);
+  width: 100%;
+}
+
+#result_div {
+  position: absolute;
+  height: 30vh;
+  width: 90%;
+  top: 40vh;
+  left: 5%;
+}
+#result_div #inside_div {
+  height: 100%;
+  width: 100%;
+  background-color: var(--result-bg);
+  opacity: 90%;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#result_div #inside_div .loading_and_result {
+  z-index: 1;
+}
+#result_div #inside_div #loading {
+  height: 100px;
+  width: 100px;
+  background-color: var(--white);
+  border-radius: 1rem;
+  position: absolute;
+}
+
+body {
+  background-image: linear-gradient(145deg, var(--white), var(--light-gray));
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+body main {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 426px) {
+  #pick_a_day {
+    font-size: 3rem;
+  }
+
+  #day_pickrs {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 3rem;
+  }
+
+  #from, #to {
+    display: inline-block;
+    min-width: 400px;
+  }
+
+  #from_day, #to_day {
+    text-shadow: 20px 3px 4px var(--light-gray);
+    font-size: 2rem;
+  }
+
+  #from_input_box, #to_input_box {
+    transition: 1s;
+    overflow: hidden;
+  }
+
+  #button_and_notify_area {
+    display: block;
+    text-align: center;
+  }
+  #button_and_notify_area #button_div {
+    height: 60px;
+    width: 30%;
+  }
+  #button_and_notify_area #button_div #button {
+    font-size: 1.5rem;
+  }
+
+  #result_div {
+    width: 60%;
+    left: 20%;
+  }
+}/*# sourceMappingURL=style.css.map */
